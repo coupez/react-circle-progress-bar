@@ -1,0 +1,16 @@
+body {
+  background: #f5f8ff;
+}
+
+.demo > div {
+  margin: 1rem;
+  width: 13rem;
+  background: white;
+  display: inline-block;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.05)
+}
+
+.demo .hello {
+  background: yellow;
+}
