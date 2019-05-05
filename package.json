@@ -1,6 +1,6 @@
 {
   "name": "react-circle-progress-bar",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "dist/progress.js",
   "module": "dist/progress.js",
   "files": [ "dist", "README.md" ],
