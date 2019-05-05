@@ -118,3 +118,5 @@ function _Progress({
 
 export const Progress = React.memo(_Progress)
 Progress.displayName = "Progress"
+
+export default Progress
