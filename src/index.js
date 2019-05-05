@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Progress } from './lib/progress'
+import Progress from './lib/progress'
 import './styles.css'
 
 function App() {
