@@ -32,7 +32,7 @@ const AnimatePercentage = React.memo(({ value, duration }) => {
 })
 
 function _Progress({
-    progress,
+    progress = 0,
     strokeWidth = 4,
     ballStrokeWidth = 16,
     reduction = 0.25,
