@@ -1,5 +1,5 @@
 # react-circle-progress-bar
-A circular progress bar for React
+A circular progress bar with gradient colors for React
 
 ![Example circular progress bars](/examples.png)
 
