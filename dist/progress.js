@@ -23,7 +23,7 @@ function useAnimateValue(value, duration) {
   return current;
 }
 
-const AnimatePercentage = React.memo(({
+const AnimatePercentage = /*#__PURE__*/React.memo(({
   value,
   duration
 }) => {
@@ -32,7 +32,7 @@ const AnimatePercentage = React.memo(({
 });
 
 function _Progress({
-  progress,
+  progress = 0,
   strokeWidth = 4,
   ballStrokeWidth = 16,
   reduction = 0.25,
@@ -61,13 +61,13 @@ function _Progress({
   const r = center - strokeWidth / 2 - ballStrokeWidth / 2;
   const circumference = Math.PI * r * 2;
   const offset = circumference * (100 - progress * (1 - reduction)) / 100;
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: `${className} ${styles.progress}`,
     style: style
-  }, React.createElement("svg", {
+  }, /*#__PURE__*/React.createElement("svg", {
     viewBox: `0 0 ${width} ${height}`,
     className: styles.svg
-  }, React.createElement("defs", null, React.createElement("linearGradient", {
+  }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     id: "gradient" + unique,
     x1: "0%",
     y1: "0%",
@@ -76,22 +76,22 @@ function _Progress({
   }, gradient.map(({
     stop,
     color
-  }) => React.createElement("stop", {
+  }) => /*#__PURE__*/React.createElement("stop", {
     key: stop,
     offset: stop * 100 + "%",
     stopColor: color
-  })))), !hideValue && React.createElement("text", {
+  })))), !hideValue && /*#__PURE__*/React.createElement("text", {
     x: center,
     y: center,
     textAnchor: "middle",
     fontSize: "30",
     fill: "#3c3c3c"
-  }, progress, "%"), React.createElement("text", {
+  }, progress, "%"), /*#__PURE__*/React.createElement("text", {
     x: center,
     y: center + 30 * 3 / 4,
     textAnchor: "middle",
     fill: "#9c9c9c"
-  }, subtitle), React.createElement("circle", {
+  }, subtitle), /*#__PURE__*/React.createElement("circle", {
     transform: `rotate(${rotate} ${center} ${center})`,
     id: "path",
     cx: center,
@@ -103,7 +103,7 @@ function _Progress({
     fill: "none",
     stroke: background,
     strokeLinecap: "round"
-  }), React.createElement("circle", {
+  }), /*#__PURE__*/React.createElement("circle", {
     style: {
       transition: `stroke-dashoffset ${transitionDuration}s ${transitionTimingFunction}`
     },
@@ -118,7 +118,7 @@ function _Progress({
     fill: "none",
     stroke: `url(#gradient${unique})`,
     strokeLinecap: "round"
-  }), !hideBall && React.createElement("circle", {
+  }), !hideBall && /*#__PURE__*/React.createElement("circle", {
     style: {
       transition: `stroke-dashoffset ${transitionDuration}s ${transitionTimingFunction}`
     },
@@ -136,6 +136,6 @@ function _Progress({
   })));
 }
 
-export const Progress = React.memo(_Progress);
+export const Progress = /*#__PURE__*/React.memo(_Progress);
 Progress.displayName = "Progress";
 export default Progress;
