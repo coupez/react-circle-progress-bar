@@ -50,7 +50,8 @@ function _Progress({
   }],
   subtitle = "",
   style,
-  className
+  className,
+  suffix = '%',
 }) {
   progress = Math.round(progress * 100) / 100;
   const width = 200;
@@ -78,7 +79,7 @@ function _Progress({
     color
   }) => /*#__PURE__*/React.createElement("stop", {
     key: stop,
-    offset: stop * 100 + "%",
+    offset: stop * 100 + (suffix || ''),
     stopColor: color
   })))), !hideValue && /*#__PURE__*/React.createElement("text", {
     x: center,

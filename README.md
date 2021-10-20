@@ -32,3 +32,4 @@ import Progress from 'react-circle-progress-bar'
 | style | undefined | Sets the style on the wrapper component |
 | className | undefined | Sets the className on the wrapper component |
 | gradient | `[{stop: 0.0, color: '#00bc9b'}, {stop: 1, color: '#5eaefd'}]` | An array of objects, declaring the gradient color of the progress bar. Use 'stop' as percentage, and 'color' as color to declare a gradient. |
+| suffix | % | Sets the suffix shown in the progress bar |

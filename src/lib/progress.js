@@ -45,6 +45,7 @@ function _Progress({
     subtitle = "",
     style,
     className,
+    suffix = '%',
   }) {
   progress = Math.round(progress * 100) / 100
   const width = 200
@@ -61,7 +62,7 @@ function _Progress({
       <svg viewBox={`0 0 ${width} ${height}`} className={styles.svg}>
         <defs>
           <linearGradient id={"gradient" + unique} x1="0%" y1="0%" x2="0%" y2="100%">
-            {gradient.map(({stop, color}) => <stop key={stop} offset={stop * 100 + "%"} stopColor={color} />)}
+            {gradient.map(({stop, color}) => <stop key={stop} offset={stop * 100 + (suffix || '')} stopColor={color} />)}
           </linearGradient>
         </defs>
         {!hideValue && 
