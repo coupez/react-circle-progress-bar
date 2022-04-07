@@ -51,7 +51,7 @@ function _Progress({
   subtitle = "",
   style,
   className,
-  suffix = '%',
+  suffix = '%'
 }) {
   progress = Math.round(progress * 100) / 100;
   const width = 200;
