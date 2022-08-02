@@ -26,11 +26,11 @@ function App() {
         transitionDuration={1}
         gradient={[{stop: 0.0, color: '#f6416d'}, {stop: 1, color: '#fa6d7c'}]} />
       <Progress progress={p2} subtitle={'storage'} />
-      <Progress progress={100} />
+      <Progress progress={100} maxValue={100} />
       <Progress progress={p3} reduction={0} hideBall/>
       <Progress progress={p1} hideBall gradient={[{stop: 0.0, color: '#f6416d'}, {stop: 1, color: '#fa6d7c'}]} />
       <Progress progress={p1} />
-      <Progress progress={37.05} subtitle="Battery" />
+      <Progress progress={37.05} maxValue={40} subtitle="Battery" />
       <Progress progress={73} hideBall gradient={[{stop: 0.0, color: '#f6416d'}, {stop: 1, color: '#fa6d7c'}]} />
       <Progress progress={82.05} subtitle="Usage" reduction={0}/>
       <Progress progress={37.05} subtitle="Battery" />
