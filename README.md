@@ -20,6 +20,7 @@ import Progress from 'react-circle-progress-bar'
 | Property | default  | information  |
 | :---:   | :-: | :-: |
 | progress | 0 | Value of the progress bar. This can range from 0 - 100 |
+| maxValue | 100 | Max Value of the progress bar.|
 | strokeWidth | 4 | Width of the bar |
 | ballStrokeWidth | 16 | Width of the ball |
 | reduction | 0.25 | Percentage of the circle that is removed. Set to 0 o have a closed circle. Default uses 3/4 of the circle (75%) so .25 reduction |
