@@ -1,8 +1,10 @@
 {
   "name": "react-circle-progress-bar",
   "version": "0.1.4",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "source": "src/lib/progress.js",
+  "main": "dist/react-circle-progress-bar.js",
+  "module": "dist/react-circle-progress-bar.module.js",
+  "exports": "./dist/react-circle-progress-bar.modern.js",
   "files": [
     "dist",
     "README.md"
@@ -21,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-demo": "react-scripts build",
-    "build": "rimraf dist && rollup -c"
+    "build": "microbundle"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,14 +43,8 @@
   "devDependencies": {
     "@babel/cli": "^7.24.1",
     "@babel/preset-react": "^7.24.1",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^28.0.6",
-    "@rollup/plugin-node-resolve": "^16.0.1",
-    "@rollup/plugin-terser": "^0.4.4",
-    "react-scripts": "5.0.1",
-    "rimraf": "^5.0.5",
-    "rollup": "^2.79.2",
-    "rollup-plugin-postcss": "^4.0.2"
+    "microbundle": "^0.15.1",
+    "react-scripts": "5.0.1"
   },
   "license": "MIT",
   "dependencies": {
