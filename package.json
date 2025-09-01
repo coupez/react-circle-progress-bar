@@ -1,10 +1,11 @@
 {
   "name": "react-circle-progress-bar",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "source": "src/lib/progress.js",
-  "main": "dist/react-circle-progress-bar.js",
-  "module": "dist/react-circle-progress-bar.module.js",
-  "exports": "./dist/react-circle-progress-bar.modern.js",
+  "main": "./dist/react-circle-progress-bar.cjs",
+  "module": "./dist/react-circle-progress-bar.module.js",
+  "unpkg": "./dist/react-circle-progress-bar.umd.js",
+  "exports": "./dist/react-circle-progress-bar.mjs",
   "files": [
     "dist",
     "README.md"
@@ -23,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-demo": "react-scripts build",
-    "build": "microbundle"
+    "build": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,8 +42,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.24.1",
-    "@babel/preset-react": "^7.24.1",
     "microbundle": "^0.15.1",
     "react-scripts": "5.0.1"
   },

@@ -1,1 +1,0 @@
-{"version":3,"sources":["progress.module.css"],"names":[],"mappings":"AAAA,QACE,qDAA4D,CAC5D,WACF,CAEA,QACE,aAAc,CACd,UACF","file":"react-circle-progress-bar.css","sourcesContent":[".progress {\r\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\r\n  width: 200px;\r\n}\r\n\r\n.svg {\r\n  display: block;\r\n  width: 100%;\r\n}\r\n"]}

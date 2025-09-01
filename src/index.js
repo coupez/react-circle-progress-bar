@@ -78,12 +78,7 @@ function App() {
           { stop: 1, color: "#fa6d7c" },
         ]}
       />
-      <Progress progress={p1} min={0} max={10} subtitle="custom range" />
-      <Progress
-        progress={p1}
-        counterClockwise={true}
-        subtitle="counter-clockwise"
-      />
+      <Progress progress={p1 / 10} min={0} max={10} subtitle="custom range" />
     </div>
   );
 }
