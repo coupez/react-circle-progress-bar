@@ -1,6 +1,16 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-import styles from "./progress.module.css";
+
+const styles = {
+  progress: {
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    width: "200px",
+  },
+  svg: {
+    display: "block",
+    width: "100%",
+  },
+};
 
 function _Progress({
   progress = 0,
@@ -39,8 +49,8 @@ function _Progress({
   });
 
   return (
-    <div className={`${className} ${styles.progress}`} style={style}>
-      <svg viewBox={`0 0 ${width} ${height}`} className={styles.svg}>
+    <div style={{ ...styles.progress, ...style }} className={className}>
+      <svg viewBox={`0 0 ${width} ${height}`} style={styles.svg}>
         <defs>
           <linearGradient
             id={"gradient" + unique}
